@@ -9,25 +9,30 @@ class Bicicleta:
         self.v      = v 
     
     def subir_velocidad(self):
-        self.v += V_INCREMENTO
-    
+        if(self.v < V_MAXIMA):
+            self.v += V_INCREMENTO
+        else: 
+            print("Velocidad máxima alcanzada!! Disminuya la velocidad!")
+            
     def bajar_velocidad(self):
-        self.v -= V_INCREMENTO
-
-bicicleta = Bicicleta(2, "roja", 15)
+        if(self.v > V_MINIMA):
+            self.v -= V_INCREMENTO
+        else:
+            print("La velocidad es 0. Empiece a pedalear")
+            
+bicicleta = Bicicleta(2, "roja", 78)
 #print(bicicleta)
 
 bicicleta.subir_velocidad()
 bicicleta.subir_velocidad()
 bicicleta.subir_velocidad()
-bicicleta.subir_velocidad()
-bicicleta.subir_velocidad()
-bicicleta.subir_velocidad()
-bicicleta.subir_velocidad()
+
 print("Velocidad actual: " ,bicicleta.v)
 
-bicicleta.bajar_velocidad()
-bicicleta.bajar_velocidad()
-bicicleta.bajar_velocidad()
-bicicleta.bajar_velocidad()
-print("Velocidad actual: " ,bicicleta.v)
+bicicleta2 = Bicicleta(2, "roja", 3)
+
+bicicleta2.bajar_velocidad()
+bicicleta2.bajar_velocidad()
+bicicleta2.bajar_velocidad()
+bicicleta2.bajar_velocidad()
+print("Velocidad actual: " ,bicicleta2.v)
