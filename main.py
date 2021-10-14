@@ -62,3 +62,56 @@ bicicleta2.bajar_velocidad()
 bicicleta2.bajar_velocidad()
 bicicleta2.bajar_velocidad()
 print("Velocidad actual: " ,bicicleta2.v)
+
+##########Ejercicio de polimorfismo############################################
+
+USO_DE_TINTA = 1
+SIN_TINTA    = 0
+CAPACIDAD_MAXIMA = 5
+
+#Instancia de creacion de la clase Util
+class Util():
+    def __init__(self,grosor,color,tinta):
+        self.grosor = grosor
+        self.color  = color
+        self.tinta  = tinta
+        
+    #Creacion del metodo escribir()
+    def escribir(self):
+        if(tinta > SIN_TINTA):
+            self.tinta -= USO_DE_TINTA
+        else:
+            print("Se acabo la tinta/mina. Cambia de cartucho")
+
+class Lapicera(Util):
+    pass
+
+class Lapiz(Util):
+    pass
+
+class Marcador(Util):
+    pass
+
+lapicera = Lapicera(4,"azul oscuro",100)
+lapiz    = Lapiz(2,"grafito",1000000)
+marcador = Marcador(10,"verde",50)
+
+class Cartuchera:
+    def __init__(self):
+        self.capacidad = []
+    
+    def agregarUtil(self, util):
+        self.capacidad.append(util)
+"""
+        if(self.capacidad < CAPACIDAD_MAXIMA)
+           self.capacidad.append(util)
+        else:
+            print("Cartuchera llena")
+"""
+cartuchera = Cartuchera()
+cartuchera.agregarUtil(marcador)
+cartuchera.agregarUtil(lapiz)
+cartuchera.agregarUtil(lapicera)
+cartuchera.agregarUtil(marcador)
+
+print(cartuchera) #Esto me imprime el objeto cartuchera pero quiero que me imprima la lista "capacidad" que contiene a los objetos !!
