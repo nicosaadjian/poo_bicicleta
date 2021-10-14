@@ -28,16 +28,21 @@ class Bicicleta:
     
     def __eq__(self, abc):
         print (self.ruedas == abc.ruedas and self.color == abc.color and self.v == abc.v)
+        
+    def multiplicar(self, abc):
+        b3 = Bicicleta(self.ruedas * abc.ruedas, "negra", 5)
+        print(b3.ruedas)
             
 bicicleta = Bicicleta(2, "roja", 78)
 
 b1 = Bicicleta(2, "azul", 5)
-b2 = Bicicleta(2, "azul", 5)
+b2 = Bicicleta(540, "azul", 5)
 
 #Si bien __eq__ recibe 2 parametros, en el parentesis solo va 1, que es el parametro (abc).
 #Esto es asi porque el parametro self esta fuera del parentesis, ya que (en este caso) 
 #self es b1.
 b1.__eq__(b2)
+b2.multiplicar(b1)
 #print(bicicleta)
 
 bicicleta.subir_velocidad()
