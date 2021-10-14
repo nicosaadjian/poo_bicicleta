@@ -20,14 +20,35 @@ class Bicicleta:
         else:
             print("La velocidad es 0. Empiece a pedalear")
             
+    def __str__(self):
+        print("Tengo", self.ruedas, "ruedas y mi velocidad actual es: ", self.v )
+    
+    #Esta funcion compara si 2 bicis son iguales. La primera (self) es la bici que llama a la funcion.
+    #La segunda (abc) es con la que comparo a la primer bici. 
+    
+    def __eq__(self, abc):
+        print (self.ruedas == abc.ruedas and self.color == abc.color and self.v == abc.v)
+            
 bicicleta = Bicicleta(2, "roja", 78)
+
+b1 = Bicicleta(2, "azul", 5)
+b2 = Bicicleta(2, "azul", 5)
+
+#Si bien __eq__ recibe 2 parametros, en el parentesis solo va 1, que es el parametro (abc).
+#Esto es asi porque el parametro self esta fuera del parentesis, ya que (en este caso) 
+#self es b1.
+b1.__eq__(b2)
 #print(bicicleta)
 
 bicicleta.subir_velocidad()
 bicicleta.subir_velocidad()
 bicicleta.subir_velocidad()
 
-print("Velocidad actual: " ,bicicleta.v)
+#print("Velocidad actual: " ,bicicleta.v)
+bicicleta.__str__()
+
+
+
 
 bicicleta2 = Bicicleta(2, "roja", 3)
 
