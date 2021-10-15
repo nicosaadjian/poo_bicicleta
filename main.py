@@ -102,23 +102,29 @@ class Cartuchera:
     
     def agregarUtil(self, util):
         #self.capacidad.append(util)
-
-        if(len(self.capacidad) < CAPACIDAD_MAXIMA)
+        
+        if(len(self.capacidad) < CAPACIDAD_MAXIMA):
            self.capacidad.append(util)
+           
         else:
             print("Cartuchera llena")
-
-            
-lapicera.escribir()
-lapicera.escribir()
-lapicera.escribir()
-lapicera.escribir()
-print(lapicera.tinta)            
-
+    
 cartuchera = Cartuchera()
+
+lapicera.escribir()
+lapicera.escribir()
+lapicera.escribir()
+lapicera.escribir()
+print(lapicera.tinta)
+
 cartuchera.agregarUtil(marcador)
 cartuchera.agregarUtil(lapiz)
 cartuchera.agregarUtil(lapicera)
-cartuchera.agregarUtil(marcador)
 
-print(cartuchera) #Esto me imprime el objeto cartuchera pero quiero que me imprima la lista "capacidad" que contiene a los objetos !!
+print(cartuchera.capacidad)
+###################################
+cartuchera.agregarUtil(marcador)
+cartuchera.agregarUtil(lapiz)
+cartuchera.agregarUtil(lapicera)
+
+print(cartuchera.capacidad)
