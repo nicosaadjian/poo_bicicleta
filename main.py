@@ -78,7 +78,7 @@ class Util():
         
     #Creacion del metodo escribir()
     def escribir(self):
-        if(tinta > SIN_TINTA):
+        if(self.tinta > SIN_TINTA):
             self.tinta -= USO_DE_TINTA
         else:
             print("Se acabo la tinta/mina. Cambia de cartucho")
