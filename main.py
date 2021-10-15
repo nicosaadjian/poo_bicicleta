@@ -101,13 +101,20 @@ class Cartuchera:
         self.capacidad = []
     
     def agregarUtil(self, util):
-        self.capacidad.append(util)
-"""
-        if(self.capacidad < CAPACIDAD_MAXIMA)
+        #self.capacidad.append(util)
+
+        if(len(self.capacidad) < CAPACIDAD_MAXIMA)
            self.capacidad.append(util)
         else:
             print("Cartuchera llena")
-"""
+
+            
+lapicera.escribir()
+lapicera.escribir()
+lapicera.escribir()
+lapicera.escribir()
+print(lapicera.tinta)            
+
 cartuchera = Cartuchera()
 cartuchera.agregarUtil(marcador)
 cartuchera.agregarUtil(lapiz)
